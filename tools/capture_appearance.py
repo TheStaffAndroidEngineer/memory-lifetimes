@@ -7,8 +7,11 @@ sys.path.insert(0,str(ROOT/'projects/commerce-app/tools'))
 from capture_checkpoint_appearance import CaptureSession,panes,pane_key
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--serial',default='emulator-5554');p.add_argument('--candidate',default='candidate1');p.add_argument('--configs',nargs='+',choices=['light','dark','large','wide'],default=['light','dark','large','wide']);a=p.parse_args();a.package='staff.android.memory';a.max_scrolls=8;a.settle_timeout=45;a.output.mkdir(parents=True,exist_ok=False)
- s=CaptureSession(a);apk=PROJECT/'evidence'/a.candidate/'artifacts/app-debug.apk';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+ p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--serial',default='emulator-5554');p.add_argument('--candidate',help='Optional retained author checkpoint');p.add_argument('--apk',type=Path,help='Explicit debug APK; defaults to app/build output');p.add_argument('--configs',nargs='+',choices=['light','dark','large','wide'],default=['light','dark','large','wide']);a=p.parse_args();a.package='staff.android.memory';a.max_scrolls=8;a.settle_timeout=45
+ apk=(a.apk or (PROJECT/'evidence'/a.candidate/'artifacts/app-debug.apk' if a.candidate else PROJECT/'app/build/outputs/apk/debug/app-debug.apk')).resolve()
+ if not apk.is_file():p.error('APK does not exist; run ./gradlew :app:assembleDebug or supply --apk: '+str(apk))
+ a.output.mkdir(parents=True,exist_ok=False)
+ s=CaptureSession(a);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
  report={'status':'STARTING','package':a.package,'apkSha256':sha(apk),'rows':[],'restorationErrors':[],'scope':'Debug API36 emulator native pixels. Shop top/scrolled, detail top/lower, Lab across light/dark/font2/wide. Not all interactions, TalkBack certification or physical timing.'};original=None;failure=None
  def launch():
   s.adb('shell','am','force-stop',a.package);s.adb('shell','am','start','-W','-n',a.package+'/.MainActivity','-f','0x10008000');return s.settled(exact=['shop'])
