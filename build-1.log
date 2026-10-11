@@ -1,0 +1,272 @@
+Calculating task graph as no cached configuration is available for tasks: :memory-core:test :retention-lab:test :heap-analyzer:installDist :app:assembleDebug :app:assembleRelease :app:assembleDebugAndroidTest :app:lintDebug :app:lintRelease
+> Task :memory-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :memory-core:processResources NO-SOURCE
+> Task :memory-core:processTestResources NO-SOURCE
+> Task :retention-lab:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :retention-lab:compileKotlin
+> Task :memory-core:compileKotlin
+> Task :retention-lab:compileJava NO-SOURCE
+> Task :memory-core:compileJava NO-SOURCE
+> Task :memory-core:classes UP-TO-DATE
+> Task :retention-lab:processResources NO-SOURCE
+> Task :retention-lab:classes UP-TO-DATE
+> Task :memory-core:jar
+> Task :retention-lab:jar
+> Task :memory-core:compileTestKotlin
+> Task :memory-core:compileTestJava NO-SOURCE
+> Task :memory-core:testClasses UP-TO-DATE
+> Task :retention-lab:compileTestKotlin
+> Task :retention-lab:compileTestJava NO-SOURCE
+> Task :retention-lab:processTestResources NO-SOURCE
+> Task :retention-lab:testClasses UP-TO-DATE
+
+> Task :memory-core:test
+
+InventoryBusTest > closingUnregistersAndPreventsFurtherCallbacks() PASSED
+
+InventoryBusTest > closeIsIdempotentAndReleasesAction() PASSED
+
+InventoryBusTest > reopeningObservesLatestValue() PASSED
+
+InventoryBusTest > labResetReleasesAllRegistrations() PASSED
+
+InventoryBusTest > removalDuringDispatchSkipsRemovedListener() PASSED
+
+InventoryBusTest > subscriberImmediatelyReceivesCurrentStock() PASSED
+
+InventoryBusTest > failureInInitialCallbackDoesNotLeakRegistration() PASSED
+
+InventoryBusTest > closeOneDoesNotCloseAnother() PASSED
+
+InventoryBusTest > invalidStockDoesNotMutateAcceptedStock() PASSED
+
+> Task :heap-analyzer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+
+> Task :retention-lab:test
+
+RetentionGraphTest > zeroByteObjectsStillParticipateInReachability() PASSED
+
+RetentionGraphTest > removingOneOwnerDoesNotCollectSharedPhoto() PASSED
+
+RetentionGraphTest > inputOrderCannotChangeTheReport() PASSED
+
+RetentionGraphTest > aSubjectWhichIsItselfSharedStillRetainsItselfWhenRemoved() PASSED
+
+RetentionGraphTest > emptyRootsDoNotMakeAllObjectsLive() PASSED
+
+RetentionGraphTest > unknownEdgesAreRejectedEvenOnUnreachableObjects() PASSED
+
+RetentionGraphTest > sumOverflowIsRejectedRatherThanWrapping() PASSED
+
+RetentionGraphTest > separateCycleIsNotReachable() PASSED
+
+RetentionGraphTest > aSubjectRootIsExcludedWhileOtherRootsRemain() PASSED
+
+RetentionGraphTest > sharedPhotoIsReachableButNotRetainedByDetail() PASSED
+
+RetentionGraphTest > snapshotResultDoesNotChangeWhenCallerChangesInputSets() PASSED
+
+RetentionGraphTest > unknownRootsAndSubjectsAreRejected() PASSED
+
+RetentionGraphTest > duplicateIdsAreRejectedRatherThanOverwritten() PASSED
+
+RetentionGraphTest > exactLongMaximumDoesNotOverflow() PASSED
+
+RetentionGraphTest > removingCallbackAlsoReleasesItsExclusivelyOwnedDetail() PASSED
+
+RetentionGraphTest > unreachableSubjectRetainsNothingFromTheRootedGraph() PASSED
+
+RetentionGraphTest > selfReferenceDoesNotPreventExclusiveRetention() PASSED
+
+RetentionGraphTest > reachableCycleTerminatesAndCountsEachObjectOnce() PASSED
+
+RetentionGraphTest > alternateRootToDescendantKeepsItReachable() PASSED
+
+RetentionGraphTest > blankIdsAndNegativeSizesAreRejected() PASSED
+
+> Task :heap-analyzer:processResources NO-SOURCE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :heap-analyzer:compileKotlin
+> Task :heap-analyzer:compileJava NO-SOURCE
+> Task :heap-analyzer:classes UP-TO-DATE
+> Task :heap-analyzer:jar
+> Task :heap-analyzer:startScripts
+> Task :app:processDebugNavigationResources
+> Task :heap-analyzer:installDist
+> Task :app:javaPreCompileDebug
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:compressDebugAssets
+> Task :app:generateDebugGlobalSynthetics
+> Task :app:checkDebugDuplicateClasses
+> Task :app:desugarDebugFileDependencies
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac
+> Task :app:processDebugJavaRes
+> Task :app:mergeDebugJavaResource
+> Task :app:mergeLibDexDebug
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:compileDebugNavigationResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeExtDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:generateReleaseBuildConfig
+> Task :app:generateReleaseResources FROM-CACHE
+> Task :app:packageReleaseResources
+> Task :app:processReleaseNavigationResources FROM-CACHE
+> Task :app:parseReleaseLocalResources FROM-CACHE
+> Task :app:generateReleaseRFile FROM-CACHE
+> Task :app:processDebugResources
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:compileReleaseKotlin
+> Task :app:javaPreCompileRelease FROM-CACHE
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:mergeReleaseArtProfile
+> Task :app:checkReleaseAarMetadata
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:compileReleaseNavigationResources FROM-CACHE
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease FROM-CACHE
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :app:extractProguardFiles
+> Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseJavaResource
+> Task :app:mergeReleaseStartupProfile
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:mergeReleaseResources
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:processReleaseResources
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:mergeReleaseGeneratedProguardFiles
+> Task :app:expandReleaseArtProfileWildcards
+> Task :app:produceReleaseComposeMapping
+> Task :app:reportReleaseComposeMappingErrors
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:lintVitalReportRelease SKIPPED
+> Task :app:lintVitalRelease SKIPPED
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:validateSigningRelease
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:mergeDebugAndroidTestManifest
+> Task :app:processDebugAndroidTestManifest
+> Task :app:generateDebugAndroidTestBuildConfig
+> Task :app:generateDebugAndroidTestResources
+> Task :app:packageDebugAndroidTestResources
+> Task :app:processDebugAndroidTestNavigationResources
+> Task :app:parseDebugAndroidTestLocalResources
+> Task :app:generateDebugAndroidTestRFile
+
+> Task :app:compileDebugAndroidTestKotlin
+w: file:///Users/rkpattanaik/Projects/TheStaffAndroidEngineer/projects/memory-lifetimes/app/src/androidTest/kotlin/staff/android/memory/OwnershipTest.kt:19:27 'fun createEmptyComposeRule(effectContext: CoroutineContext = ...): ComposeTestRule' is deprecated. Use `androidx.compose.ui.test.junit4.v2.createEmptyComposeRule` instead. The v2 APIs use StandardTestDispatcher instead of UnconfinedTestDispatcher, which aligns with standard coroutine behavior by queuing tasks rather than executing them immediately. Tests relying on immediate execution may require explicit synchronization. Please refer to the migration guide for more details.
+
+> Task :app:javaPreCompileDebugAndroidTest FROM-CACHE
+> Task :app:compileDebugAndroidTestJavaWithJavac
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:generateDebugAndroidTestGlobalSynthetics FROM-CACHE
+> Task :app:processDebugAndroidTestJavaRes
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:desugarDebugAndroidTestFileDependencies FROM-CACHE
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:compileDebugAndroidTestNavigationResources FROM-CACHE
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:processDebugAndroidTestResources
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+> Task :app:generateDebugAndroidTestLintModel
+> Task :app:generateDebugLintReportModel
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:generateDebugUnitTestLintModel
+> Task :app:minifyReleaseWithR8
+> Task :app:mergeReleaseComposeMapping
+> Task :app:compileReleaseArtProfile
+> Task :app:convertShrunkResourcesToBinaryRelease
+> Task :app:optimizeReleaseResources
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebugUnitTest
+> Task :app:generateReleaseLintReportModel
+> Task :app:lintAnalyzeDebug
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///Users/rkpattanaik/Projects/TheStaffAndroidEngineer/projects/memory-lifetimes/app/build/reports/lint-results-debug.html
+Wrote SARIF report to file:///Users/rkpattanaik/Projects/TheStaffAndroidEngineer/projects/memory-lifetimes/app/build/reports/lint-results-debug.sarif
+
+> Task :app:lintDebug
+> Task :app:lintAnalyzeRelease
+
+> Task :app:lintReportRelease
+Wrote HTML report to file:///Users/rkpattanaik/Projects/TheStaffAndroidEngineer/projects/memory-lifetimes/app/build/reports/lint-results-release.html
+Wrote SARIF report to file:///Users/rkpattanaik/Projects/TheStaffAndroidEngineer/projects/memory-lifetimes/app/build/reports/lint-results-release.sarif
+
+> Task :app:lintRelease
+
+[Incubating] Problems report is available at: file:///Users/rkpattanaik/Projects/TheStaffAndroidEngineer/projects/memory-lifetimes/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.8.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 21s
+145 actionable tasks: 134 executed, 11 from cache
+Configuration cache entry stored.
